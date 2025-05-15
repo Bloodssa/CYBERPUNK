@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+:root {
+    --bgcolor: #fdd835;
+    --txtcolor: #000; 
+    --orbitron: "Orbitron", sans-serif;
+    --michroma: "Michroma", sans-serif;
+    --btncolor: #000000;
+    --LIGHTBLUE: #0eb4fb;
+}
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.937),rgba(0, 0, 0, 0.942));
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 23px;
+    color: var(--bgcolor);
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    border-bottom: 1px solid red;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation-name: top;
+    animation-duration: 1.5s;
+}
+nav ul {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: red;
+    font-family: var(--orbitron);
+    font-weight: 700;
+    transition: color 0.3s ease;
+    animation: fadeIn 5.3s ease;
+}
+nav a:hover {
+    color: var(--bgcolor);
+}
+@keyframes fadeIn {    
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+nav li {
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    left: 47%;
+}
+.logo {
+    font-family: var(--michroma);
+    font-size: 23px;
+    text-shadow: 1px 2px 1px #000;
+    animation: fadeIn 5.3s ease; 
+}
+.logo > .p {
+    font-size: 28px;
+    color: #f80000;
+    font-weight: 1000;
+}
+.btn1 {
+    padding: 8px 15px;
+    position: relative;
+    left: 1%;
+    border: 2px solid #000;
+    background-color: var(--btncolor);
+    color: var(--bgcolor);
+    font-weight: 1000;
+    letter-spacing: 1px;
+    font-family: var(--michroma);
+    transition: all 0.1s linear;
+    border: 2px solid red;
+    animation: fadeIn 5.3s ease;
+}
+.btn1:hover {
+    border-radius: 5px;
+    scale: 1.02;
+}
+.btn1:active {
+    scale: 0.98;
+}
+main {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+#hero {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(https://cdn.arstechnica.net/wp-content/uploads/2020/12/Screenshot-143.png);
+    background-size: 100% 100%;
+}
+.wordbox {
+    text-align: center;
+    font-size: 70px;
+    color:#fff;
+    font-weight: bolder;
+    position: relative;
+    top: 18%;
+    font-family: var(--orbitron);
+    animation-name: opacity;
+    animation-duration: 2.2s;
+}
+@keyframes top {
+    from {transform: translateY(-110%);}
+}
+@keyframes opacity {
+    from {transform: translateX(-90%);}
+}
+.wordbox > .word1 {
+    font-size: 25px;
+}
+.scroll {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-90%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 21%;
+    animation-name: fromLeft;
+    animation-duration: 1.5s;
+}
+@keyframes fromLeft {
+    from {
+        transform: translateY(200%);
+    }
+}
+.container  {
+    display: flex;
+    width: 80%;
+    height: 42vh;
+}
+.box {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.image {
+    position: relative;
+    left: -3%;
+    width: 24%;
+    height: 33vh;
+    opacity: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.hidden {
+    opacity: 0;
+  }
+.image > img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.image img:hover {
+    transform: scale(1.1);
+}
+.des_img {
+    position: relative;
+    left: -3%;
+    width: 17%;
+    height: 33vh;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17.5px;
+    font-family: var(--michroma);
+}
+.right {
+    margin-right: 25px;
+}
+.bt2 {
+    padding: 10px 10px;
+    border-radius: 15px;
+    color: #fff;
+    border: none;
+    transition: background-color 0.6s ease;
+}
+.bt2:hover {
+    background-color: #000;
+}
+.btn_container {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#gears{
+    height: 100vh;
+    padding: 70px;  
+}
+.text_gear {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--michroma);
+    color: #ffffff;
+    position: relative;
+    top: 4%;
+}
+.word3 {
+    font-size: 30px;
+    font-weight: 1000;
+}
+.grid_container {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 333px);
+    grid-template-rows: 120px 140px 270px;
+    grid-template-areas: 
+    'item1 item1 item2 item2'
+    'item1 item1 item2 item2'
+    'item1 item1 item3 item4';
+    gap: 1em;
+}
+.item1 {
+    border-radius: 15px;
+    border: 1px solid red;
+}
+.dess {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.item1:hover .dess {
+    opacity: 1;
+}
+.des_1 {
+    position: relative;
+    top: 79%;
+    text-align: center;
+    font-family: var(--michroma);
+    color: #000000;
+    font-weight: 1000;
+    font-size: 35px;
+
+}
+.des2 {
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 500;
+}
+.des3 {
+    position: relative;
+    top: 73%;
+    color: #fff;
+    font-family: var(--michroma);
+    text-align: center;
+    font-size: 45px;
+}
+.des4 {
+    position: relative;
+    top: 70%;
+    text-align: center;
+    font-family: var(--michroma);
+    font-weight: bolder;
+    color: #00ffd9;
+    backdrop-filter: blur(30px);
+    font-size: 26px;
+}
+.des5 {
+    position: relative;
+    top: 65%;
+    text-align: center;
+    font-family: var(--michroma);
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.img1 {
+    background-image: url(https://ae04.alicdn.com/kf/S59121c62410646dbb508c55d8d61757dI.jpg);
+    background-size: 100% 100%;
+    transition: background-size 0.4s ease;
+}
+.img1:hover {background-size: 104% 104%;}
+.img2:hover {background-size: 104% 104%;}
+.img3:hover {background-size: 104% 104%;}
+.img4:hover {background-size: 104% 104%;}
+.img2 {
+    background-image: url(https://img.freepik.com/premium-photo/futuristic-motorcycle-cyberpunk-cityscape_1123896-145032.jpg);
+    background-size: 100% 100%;
+    transition: background-size 0.4s ease;
+}
+.img3 {
+    background-size: 100% 100%;
+    transition: background-size 0.4s ease;
+    background-image: url(https://preview.redd.it/how-do-you-imagine-a-cyberpunk-future-personally-a-v0-4325xhsibm3a1.jpg?width=1080&crop=smart&auto=webp&s=b269cd7336ed30ee0f649f9bb91eb069134c8ee3);
+}
+.img4 {
+    background-image: url(https://i.ytimg.com/vi/g-DiT7f64H0/maxresdefault.jpg);
+    background-size: 100% 100%;
+    transition: background-size 0.4s ease;
+}
+#companions {
+    height: 100vh;
+    padding: 70px; 
+}
+.grid__container {
+    position: relative;
+    top: 22%;
+    display: grid;
+    grid-template-rows: repeat(2, 220px);
+    grid-template-columns: 370px 370px 296px 296px;
+    grid-template-areas: 
+    'grid1 grid2 grid3 grid4'
+    'grid5 grid6 grid3 grid4';
+    gap: 1em;
+}
+.grid__item {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #0eb4fb;
+}
+.img__container {
+    top: 190%;
+    left: 20%;
+    width: 50%;
+    height: 70vh;
+    z-index: -1000;
+    position: absolute;
+}
+#visuals {
+    height: 125vh;
+    padding: 70px;
+}
+.img__container > img {
+    width: 100%;
+    height: 100%;
+}
+.grid__item  > img {
+    width: 100%;
+    height: 100%;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+.grid__item  > img:hover {
+    width: 104%;
+    height: 104%;
+}
+.word5 {
+    font-size: 90px;
+    color: var(--LIGHTBLUE);
+    font-family: var(--orbitron);
+    font-weight: 1000;
+}
+.word6 {
+    position: relative;
+    top: 5%;
+    font-size: 14px;
+    font-family: var(--michroma);
+    color: var(--LIGHTBLUE);
+    font-weight: 800;
+}
+.pad {
+    padding: 10px;
+}
+.flex_container {
+    position: relative;
+    top: 8%;
+    display: flex;
+    height: 72vh;
+    width: 90%;
+    gap: 1em;
+}
+.flex_item {
+    flex-grow: 1;
+    border-radius: 20px;
+    transition: flex-grow 0.4s cubic-bezier(0.29, -0.81, 0.42, 1.68);
+}
+.flex_item:hover {
+    flex-grow: 1.5;
+}
+.flex_item:hover .one {
+    display: block;
+}
+.flex1 {
+    background-image: url(https://blogger.googleusercontent.com/img/a/AVvXsEhkQkrv9kf60iLhac9F2H3PntiKDBvf7KiTc6h4cVAe1bAWHBI15ixbanwyAV0cfxyjcxQ8iWdDQfZXLsrNYBqKQV8IO6CmguQIFbG81q6xnz_LyWtNj9qywvhaSt5SWzjEcAbTshA9fej6lVjgFp1ocp0vkmjAUvYKdBZJ-OuCXXlhAdGnQayNb-j4aAk=s1920);
+    background-size: 100% 100%;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 8%;
+}
+.flex2 {
+    background-image: url(https://media.istockphoto.com/id/1369890290/photo/cyberpunk-urban-samurai.jpg?s=612x612&w=0&k=20&c=PQ_99_oLOlFr3KmqGb6hhAmQ0LHRYQU7TCzsWbHF-ZQ=);
+    background-size: 100% 100%;
+}
+.flex3 {
+    background-image: url(https://i.ytimg.com/vi/loQfZe4p3Fg/maxresdefault.jpg);
+    background-size: 100% 100%;
+}
+.vis {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--michroma);
+    color: #fff;
+}
+.vis_des {
+    position: relative;
+    top: 60%;
+    font-size: 17px;
+    text-align: center;
+    font-family: var(--michroma);
+    color: #fff;
+}
+.one {
+    display: none;
+}
+.flex_container:hover .flex_item:not(:hover) {
+    filter: grayscale(1) blur(5px);
+}
+footer {
+    padding: 70px;
+    height: 44vh;
+    bottom: 0;
+    background-image: url(foot.png);
+    background-size: 100% 100%;
+}
+footer ul {
+    margin-top: 40px;
+    list-style: none;
+}
+footer li {
+    font-size: 25px;
+    font-family: var(--michroma);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.up {
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer li:hover {
+    color: #aca6a6;
+    cursor: pointer;
+}
